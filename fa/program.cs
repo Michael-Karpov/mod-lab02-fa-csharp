@@ -48,22 +48,21 @@ namespace fans
         };
 
         State InitialState = a;
-
-  public class FA1
-  {
-    public bool? Run(IEnumerable<char> s)
-    {
-      return false;
+    
         public FA1()
         {
             a.Transitions['0'] = b;
             a.Transitions['1'] = c;
+
             b.Transitions['0'] = d;
             b.Transitions['1'] = e;
+
             c.Transitions['0'] = e;
             c.Transitions['1'] = c;
+
             d.Transitions['0'] = d;
             d.Transitions['1'] = d;
+
             e.Transitions['0'] = d;
             e.Transitions['1'] = e;
         }
@@ -79,7 +78,7 @@ namespace fans
             }
             return current.IsAcceptState;
         }
-    }
+   }
   
 
   public class FA2
@@ -115,10 +114,13 @@ namespace fans
         {
             a.Transitions['0'] = b;
             a.Transitions['1'] = c;
+
             b.Transitions['0'] = a;
             b.Transitions['1'] = d;
+
             c.Transitions['0'] = d;
             c.Transitions['1'] = a;
+
             d.Transitions['0'] = c;
             d.Transitions['1'] = b;
         }
@@ -134,6 +136,7 @@ namespace fans
             }
             return current.IsAcceptState;
         }
+
   }
   
   public class FA3
